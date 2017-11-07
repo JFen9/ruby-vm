@@ -5,6 +5,9 @@ Vagrant.configure("2") do |config|
 
   config.vm.box = "harvardcatalyst/centos-6-rails"
 
+  config.vm.synced_folder "..", "/vagrant", type: "rsync",
+      rsync__exclude: ".git/"
+
   # enable this to use ssh agent on host machine
   config.ssh.forward_agent = true
 
