@@ -1,0 +1,12 @@
+site "http://community.opscode.com/api/v1"
+
+cookbook 'apt'
+cookbook 'build-essential'
+
+cookbook 'ruby_build'
+cookbook 'ruby_rbenv', '~> 1.1.0'
+cookbook 'postgresql', git: 'https://github.com/ChowOps/chef-postgresql'
+cookbook 'mysql', '~> 8.5.1'
+cookbook 'vim'
+cookbook 'xslt', '~> 0.0.1'
+cookbook 'cloudcli', '~> 1.2.0'
