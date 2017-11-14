@@ -29,8 +29,7 @@ SITE
     ruby_build (1.1.0)
       git (>= 0.0.0)
       yum-epel (>= 0.0.0)
-    ruby_rbenv (1.1.0)
-      ruby_build (>= 0.0.0)
+    ruby_rbenv (2.0.5)
     seven_zip (2.0.2)
       windows (>= 1.2.2)
     vim (2.0.2)
@@ -55,7 +54,7 @@ DEPENDENCIES
   mysql (~> 8.5.1)
   postgresql (>= 0)
   ruby_build (>= 0)
-  ruby_rbenv (~> 1.1.0)
+  ruby_rbenv (~> 2.0.5)
   vim (>= 0)
   xslt (~> 0.0.1)
 
