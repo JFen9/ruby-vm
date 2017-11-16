@@ -7,4 +7,8 @@ Make sure ssh identity is available on host machine:
 
 `ssh-add -l`
 
-`ssh-add -k <path to private key>`
+## change mysql root password
+[use mysqladmin](https://dev.mysql.com/doc/refman/5.7/en/mysqladmin.html)
+
+## set aws credentials
+aws configure
