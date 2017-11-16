@@ -37,40 +37,13 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "cloudcli"
     # custom recipe to do post config
     chef.add_recipe "config_everything"
-
-    chef.json = {
-
-      # rbenv: {
-      #   user_installs: [{
-      #     user: 'ubuntu',
-      #     rubies: ["2.1.10", "2.1.3"],
-      #     global: "2.1.10",
-      #     gems: {
-      #           "2.1.10" => [
-      #             { name: "bundler" }
-      #           ],
-      #           "2.1.3" => [
-      #             { name: "bundler" }
-      #           ]
-      #         }
-      #   }]
-      # }
-    }
   end
 
   config.vm.provision "shell", inline: <<-SHELL
-    #ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-
-    #pip install -q awscli
-    #export DEBIAN_FRONTEND=noninteractive
-    #sudo -E apt-get -qy install mysql-server
-    #sudo apt install mysql-client
-    # Nokogiri 1.4.7 requires this
-    #sudo yum -y install libxslt-devel
 
     sudo apt-get -qy install ntp
     sudo service ntp start
-    #echo 'ln -s /vagrant/true-sql/true-sql /usr/local/bin/true-sql' >> ~/.bash_profile
-    #echo 'source "/vagrant/true-sql/completion.bash"' >> ~/.bash_profile
+    sudo apt-get -qy install libsqlite3-dev
+    sudo apt-get -qy install libcurl4-openssl-dev
   SHELL
 end

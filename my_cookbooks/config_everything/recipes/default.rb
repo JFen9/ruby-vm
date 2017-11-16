@@ -13,6 +13,7 @@ rbenv_system_install 'system'
 
 rbenv_ruby '2.1.10'
 rbenv_ruby '2.1.3'
+rbenv_ruby '2.1.2'
 
 rbenv_global '2.1.10'
 
@@ -22,4 +23,8 @@ end
 
 rbenv_gem 'bundler' do
   rbenv_version '2.1.3'
+end
+
+rbenv_gem 'bundler' do
+  rbenv_version '2.1.2'
 end
