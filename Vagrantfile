@@ -6,10 +6,14 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
 
   # sync folders, maybe we need to configure this
-  config.vm.synced_folder "..", "/vagrant", type: "virtualbox"
+  config.vm.synced_folder "..", "/workspace/ruby", type: "virtualbox"
+  config.vm.synced_folder "../../PycharmProjects", "/workspace/python", type: "virtualbox"
 
-  # Configure this too
+  # configure this
   config.vm.network "forwarded_port", guest: 9000, host: 9000
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  config.vm.network "forwarded_port", guest: 5000, host: 5000
+  config.vm.network "forwarded_port", guest: 1234, host: 61234, auto_correct: true
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 2048
