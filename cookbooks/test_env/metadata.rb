@@ -1,0 +1,5 @@
+name 'test_env'
+depends 'mysql', '~> 8.0'
+depends 'database'
+depends 'mysql2_chef_gem'
+depends 'ruby_rbenv'
